@@ -18,7 +18,9 @@ function App() {
   const [style,setStyle]=useState(
     {
       'color':'black',
-      'backgroundColor':'white'
+      'backgroundColor':'white',
+      
+      
     }
   )
   const showAlert=(message,type)=>{
@@ -36,7 +38,7 @@ function App() {
       setStyle(
         {
           'color':'white',
-          'backgroundColor':'rgba(4,39,67,0.7)'
+          'backgroundColor':'rgba(4,35,66,0.9)'
         }
       )
       // document.title='Text Utils Dark Mode'
@@ -65,7 +67,7 @@ function App() {
       <div className='container my-3'>
       <Routes>
     
-    <Route exact path="/about" element={<About style={style}/>}>
+    <Route exact path="/about" element={<About style={style} mode={mode}/>}>
     </Route>
     <Route exact path="/" element={<TextForm heading='Enter the text to analyze below' mode={mode} showAlert={showAlert}/>}>
         

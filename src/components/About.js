@@ -4,9 +4,9 @@ export default function About(props) {
   
   return (
     <>
-    <div className='container my-3' style={props.style}>
+    <div className={`container my-3  text-${props.mode==='light'?'dark':'light'}`} >
       <h1>About Us</h1>
-      <div className="accordion" id="accordionExample" >
+      <div className="accordion " id="accordionExample" >
   <div className="accordion-item">
     <h2 className="accordion-header">
       <button className="accordion-button" style={props.style} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
